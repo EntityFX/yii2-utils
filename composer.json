@@ -1,0 +1,12 @@
+{
+  "name": "EntityFX/yii2-utils",
+  "description": "Extends yii2 with several utilites",
+  "minimum-stability": "alpha",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Artem Solopiy",
+      "email": "artem.solopiy@gmail.com"
+    }
+  ]
+}
