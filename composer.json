@@ -1,12 +1,17 @@
 {
   "name": "entityfx/yii2-utils",
   "description": "Extends yii2 with several utilites",
-  "minimum-stability": "alpha",
+  "minimum-stability": "dev",
+  "keywords": ["yii2", "extension", "utils", "workers"],
   "license": "MIT",
   "authors": [
     {
       "name": "Artem Solopiy",
       "email": "artem.solopiy@gmail.com"
     }
-  ]
+  ],
+  "require": {
+    "yiisoft/yii2": "@dev"
+  }
 }
+
