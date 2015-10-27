@@ -5,9 +5,9 @@
  * @author    :
  */
 
-namespace app\utils\workers\contracts\repositories;
+namespace entityfx\utils\workers\contracts\repositories;
 
-use app\utils\RetrieveResult;
+use entityfx\utils\RetrieveResult;
 
 class WorkerRetrieveResult extends RetrieveResult {
 

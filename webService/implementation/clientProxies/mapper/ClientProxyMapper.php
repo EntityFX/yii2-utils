@@ -1,12 +1,12 @@
 <?php
 
-namespace app\utils\webService\implementation\clientProxies\mapper;
+namespace entityfx\utils\webService\implementation\clientProxies\mapper;
 
-use app\utils\exceptions\ManagerException;
-use app\utils\mappers\BusinessLogicMapperBase;
-use app\utils\webService\contracts\clientProxies\repositories\WebClientProxyData;
-use app\utils\webService\contracts\services\enums\WebServiceTypeEnum;
-use app\utils\webService\dataAccess\ClientProxyEntity;
+use entityfx\utils\exceptions\ManagerException;
+use entityfx\utils\mappers\BusinessLogicMapperBase;
+use entityfx\utils\webService\contracts\clientProxies\repositories\WebClientProxyData;
+use entityfx\utils\webService\contracts\services\enums\WebServiceTypeEnum;
+use entityfx\utils\webService\dataAccess\ClientProxyEntity;
 
 /**
  * @link      http://entityfx.ru

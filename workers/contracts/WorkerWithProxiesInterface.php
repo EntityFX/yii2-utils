@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\workers\contracts;
+namespace entityfx\utils\workers\contracts;
 
-use app\utils\webService\clientProxies\WebClientProxyInterface;
+use entityfx\utils\webService\clientProxies\WebClientProxyInterface;
 use Traversable;
 
 interface WorkerWithProxiesInterface {

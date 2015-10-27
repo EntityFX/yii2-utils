@@ -1,9 +1,9 @@
 <?php
 
-namespace app\utils;
+namespace entityfx\utils;
 
-use app\utils\enum\EnumBase;
-use app\utils\enum\OrderDirectionEnum;
+use entityfx\utils\enum\EnumBase;
+use entityfx\utils\enum\OrderDirectionEnum;
 use Yii;
 use yii\base\Component;
 use yii\db\Connection;

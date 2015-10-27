@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\filters;
+namespace entityfx\utils\filters;
 use yii\base\Object;
 
 /**

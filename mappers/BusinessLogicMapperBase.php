@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace app\utils\mappers;
+namespace entityfx\utils\mappers;
 
 
 use yii\base\Object;

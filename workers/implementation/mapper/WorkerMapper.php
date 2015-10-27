@@ -1,12 +1,12 @@
 <?php
 
-namespace app\utils\workers\implementation\mapper;
+namespace entityfx\utils\workers\implementation\mapper;
 
-use app\utils\exceptions\ManagerException;
-use app\utils\mappers\BusinessLogicMapperBase;
-use app\utils\workers\contracts\repositories\WorkerData;
-use app\utils\workers\contracts\repositories\WorkerStatusEnum;
-use app\utils\workers\dataAccess\WorkerEntity;
+use entityfx\utils\exceptions\ManagerException;
+use entityfx\utils\mappers\BusinessLogicMapperBase;
+use entityfx\utils\workers\contracts\repositories\WorkerData;
+use entityfx\utils\workers\contracts\repositories\WorkerStatusEnum;
+use entityfx\utils\workers\dataAccess\WorkerEntity;
 use DateTime;
 use Exception;
 use SimpleXMLElement;

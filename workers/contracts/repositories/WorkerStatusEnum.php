@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\workers\contracts\repositories;
-use app\utils\enum\EnumBase;
+namespace entityfx\utils\workers\contracts\repositories;
+use entityfx\utils\enum\EnumBase;
 
 /**
  * Class WorkerStatusEnum

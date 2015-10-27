@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\workers\contracts\settings;
-use app\utils\webService\HttpProxy;
-use app\utils\webService\HttpAuthBase;
+namespace entityfx\utils\workers\contracts\settings;
+use entityfx\utils\webService\HttpProxy;
+use entityfx\utils\webService\HttpAuthBase;
 
 /**
  * Class IWorkerClientProxySettings

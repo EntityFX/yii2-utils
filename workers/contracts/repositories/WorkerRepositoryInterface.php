@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\workers\contracts\repositories;
+namespace entityfx\utils\workers\contracts\repositories;
 
-use app\utils\Limit;
+use entityfx\utils\Limit;
 
 interface WorkerRepositoryInterface {
     /**

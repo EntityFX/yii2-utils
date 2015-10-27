@@ -5,13 +5,13 @@
  * @author    :
  */
 
-namespace app\utils\webService\implementation\clientProxies\mapper;
+namespace entityfx\utils\webService\implementation\clientProxies\mapper;
 
 
-use app\utils\exceptions\ManagerException;
-use app\utils\mappers\BusinessLogicMapperBase;
-use app\utils\webService\contracts\services\WebServiceEndpoint;
-use app\utils\webService\dataAccess\ClientProxyEndpointEntity;
+use entityfx\utils\exceptions\ManagerException;
+use entityfx\utils\mappers\BusinessLogicMapperBase;
+use entityfx\utils\webService\contracts\services\WebServiceEndpoint;
+use entityfx\utils\webService\dataAccess\ClientProxyEndpointEntity;
 
 class ClientProxyEndpointMapper extends BusinessLogicMapperBase {
 

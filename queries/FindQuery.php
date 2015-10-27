@@ -7,10 +7,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace app\utils\queries;
-use app\utils\filters\FilterBase;
-use app\utils\Limit;
-use app\utils\order\OrderBase;
+namespace entityfx\utils\queries;
+use entityfx\utils\filters\FilterBase;
+use entityfx\utils\Limit;
+use entityfx\utils\order\OrderBase;
 
 /**
  * Class FindQuery

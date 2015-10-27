@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\webService\clientProxies;
+namespace entityfx\utils\webService\clientProxies;
 
-use app\utils\webService\HttpAuthDigest;
+use entityfx\utils\webService\HttpAuthDigest;
 use yii\base\Exception;
 
 class UploadFileWebClientProxyBase extends WebClientProxyBase {

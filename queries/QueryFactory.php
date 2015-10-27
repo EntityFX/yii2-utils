@@ -1,10 +1,10 @@
 <?php
 
-namespace app\utils\queries;
-use app\utils\filters\FilterBase;
-use app\utils\Guid;
-use app\utils\Limit;
-use app\utils\order\OrderBase;
+namespace entityfx\utils\queries;
+use entityfx\utils\filters\FilterBase;
+use entityfx\utils\Guid;
+use entityfx\utils\Limit;
+use entityfx\utils\order\OrderBase;
 use ReflectionClass;
 use Yii;
 

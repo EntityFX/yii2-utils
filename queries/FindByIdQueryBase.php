@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\queries;
-use app\utils\Guid;
+namespace entityfx\utils\queries;
+use entityfx\utils\Guid;
 use yii\base\Exception;
 
 /**

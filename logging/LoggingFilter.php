@@ -1,9 +1,9 @@
 <?php
 
-namespace app\utils\logging;
+namespace entityfx\utils\logging;
 use DateTime;
-use app\utils\filters\DefaultFilterInterface;
-use app\utils\filters\OrdinaryFilterBase;
+use entityfx\utils\filters\DefaultFilterInterface;
+use entityfx\utils\filters\OrdinaryFilterBase;
 
 /**
  * Class LoggingFilter

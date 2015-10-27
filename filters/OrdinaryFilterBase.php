@@ -6,7 +6,7 @@
  * Time: 21:46
  */
 
-namespace app\utils\filters;
+namespace entityfx\utils\filters;
 
 
 abstract class OrdinaryFilterBase extends FilterBase implements DefaultFilterInterface, EmptyFilterInterface  {

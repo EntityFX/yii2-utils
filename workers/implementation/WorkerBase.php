@@ -1,13 +1,13 @@
 <?php
 
-namespace app\utils\workers\implementation;
+namespace entityfx\utils\workers\implementation;
 
-use app\utils\workers\contracts\WorkerInterface;
-use app\utils\workers\contracts\WorkerSettings;
+use entityfx\utils\workers\contracts\WorkerInterface;
+use entityfx\utils\workers\contracts\WorkerSettings;
 use yii\base\Component;
-use app\utils\workers\contracts\repositories\WorkerStatusEnum;
+use entityfx\utils\workers\contracts\repositories\WorkerStatusEnum;
 use Yii;
-use app\utils\exceptions\WorkerException;
+use entityfx\utils\exceptions\WorkerException;
 use yii\log\Logger;
 
 /**

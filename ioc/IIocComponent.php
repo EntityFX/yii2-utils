@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\ioc;
+namespace entityfx\utils\ioc;
 
 interface IIocComponent {
     const COMPONENT_NAME = 'ioc';

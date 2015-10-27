@@ -1,16 +1,16 @@
 <?php
 
-namespace app\utils\workers\implementation;
+namespace entityfx\utils\workers\implementation;
 
-use app\utils\webService\contracts\clientProxies\WebClientProxyInterface;
-use app\utils\workers\contracts\settings\WorkerClientProxySettingsInterface;
-use app\utils\workers\contracts\settings\WorkerClientProxyXmlSettings;
-use app\utils\workers\contracts\WorkerInterface;
-use app\utils\workers\contracts\WorkerSynchroniseCallbackTypes;
-use app\utils\workers\contracts\WorkerWithProxiesInterface;
+use entityfx\utils\webService\contracts\clientProxies\WebClientProxyInterface;
+use entityfx\utils\workers\contracts\settings\WorkerClientProxySettingsInterface;
+use entityfx\utils\workers\contracts\settings\WorkerClientProxyXmlSettings;
+use entityfx\utils\workers\contracts\WorkerInterface;
+use entityfx\utils\workers\contracts\WorkerSynchroniseCallbackTypes;
+use entityfx\utils\workers\contracts\WorkerWithProxiesInterface;
 use Traversable;
 use yii\base\Exception;
-use app\utils\exceptions\InternalExceptionBase;
+use entityfx\utils\exceptions\InternalExceptionBase;
 use Closure;
 use yii\log\Logger;
 

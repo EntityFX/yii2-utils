@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\webService\contracts\clientProxies\repositories;
+namespace entityfx\utils\webService\contracts\clientProxies\repositories;
 
-use app\utils\Limit;
+use entityfx\utils\Limit;
 use Traversable;
 
 interface WebClientProxyRepositoryInterface {

@@ -6,7 +6,7 @@
  * Time: 22:26
  */
 
-namespace app\utils;
+namespace entityfx\utils;
 
 
 use yii\base\Component;

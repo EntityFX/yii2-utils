@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\webService\dataAccess;
+namespace entityfx\utils\webService\dataAccess;
 
 use yii\db\ActiveRecord;
 

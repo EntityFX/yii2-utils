@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\processes;
-use app\utils\enum\EnumBase;
+namespace entityfx\utils\processes;
+use entityfx\utils\enum\EnumBase;
 
 /**
  * Class ProcessOsTypeEnum

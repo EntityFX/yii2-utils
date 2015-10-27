@@ -1,9 +1,9 @@
 <?php
 
-namespace app\utils\crypto\implementation;
+namespace entityfx\utils\crypto\implementation;
 
-use app\utils\crypto\contracts\XXTeaCryptoAlgorithmInterface;
-use app\utils\crypto\CryptoAlgorithmInterface;
+use entityfx\utils\crypto\contracts\XXTeaCryptoAlgorithmInterface;
+use entityfx\utils\crypto\CryptoAlgorithmInterface;
 
 class XXTeaCryptoAlgorithm implements CryptoAlgorithmInterface,  XXTeaCryptoAlgorithmInterface {
 

@@ -1,17 +1,17 @@
 <?php
 
-namespace app\utils\workers\implementation\repositories;
+namespace entityfx\utils\workers\implementation\repositories;
 
-use app\utils\exceptions\WorkerException;
-use app\utils\Limit;
-use app\utils\mappers\BusinessLogicMapperBase;
-use app\utils\RepositoryBase;
-use app\utils\workers\contracts\repositories\WorkerData;
-use app\utils\workers\contracts\repositories\WorkerRepositoryInterface;
-use app\utils\workers\contracts\repositories\WorkerRetrieveResult;
-use app\utils\workers\contracts\repositories\WorkerStatusEnum;
-use app\utils\workers\dataAccess\WorkerClientProxyXrefEntity;
-use app\utils\workers\dataAccess\WorkerEntity;
+use entityfx\utils\exceptions\WorkerException;
+use entityfx\utils\Limit;
+use entityfx\utils\mappers\BusinessLogicMapperBase;
+use entityfx\utils\RepositoryBase;
+use entityfx\utils\workers\contracts\repositories\WorkerData;
+use entityfx\utils\workers\contracts\repositories\WorkerRepositoryInterface;
+use entityfx\utils\workers\contracts\repositories\WorkerRetrieveResult;
+use entityfx\utils\workers\contracts\repositories\WorkerStatusEnum;
+use entityfx\utils\workers\dataAccess\WorkerClientProxyXrefEntity;
+use entityfx\utils\workers\dataAccess\WorkerEntity;
 use yii\db\IntegrityException;
 use yii\db\Query;
 

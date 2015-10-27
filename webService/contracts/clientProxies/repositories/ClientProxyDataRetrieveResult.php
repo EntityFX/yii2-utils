@@ -5,10 +5,10 @@
  * @author    :
  */
 
-namespace app\utils\webService\contracts\clientProxies\repositories;
+namespace entityfx\utils\webService\contracts\clientProxies\repositories;
 
 
-use app\utils\RetrieveResult;
+use entityfx\utils\RetrieveResult;
 
 class ClientProxyDataRetrieveResult extends RetrieveResult {
 

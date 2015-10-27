@@ -1,9 +1,9 @@
 <?php
 
-namespace app\utils\webService\contracts\clientProxies\repositories;
+namespace entityfx\utils\webService\contracts\clientProxies\repositories;
 
-use app\utils\webService\contracts\services\enums\WebServiceTypeEnum;
-use app\utils\webService\contracts\services\WebServiceEndpoint;
+use entityfx\utils\webService\contracts\services\enums\WebServiceTypeEnum;
+use entityfx\utils\webService\contracts\services\WebServiceEndpoint;
 use Traversable;
 use yii\base\Component;
 

@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\webService\contracts\services\enums;
-use app\utils\enum\EnumBase;
+namespace entityfx\utils\webService\contracts\services\enums;
+use entityfx\utils\enum\EnumBase;
 
 /**
  * Перечисление типой веб-сервисов

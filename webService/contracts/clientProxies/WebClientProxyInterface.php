@@ -1,10 +1,10 @@
 <?php
 
-namespace app\utils\webService\contracts\clientProxies;
+namespace entityfx\utils\webService\contracts\clientProxies;
 
-use app\utils\webService\contracts\HttpAuthBase;
-use app\utils\webService\contracts\services\HttpProxy;
-use app\utils\webService\contracts\services\WebServiceEndpoint;
+use entityfx\utils\webService\contracts\HttpAuthBase;
+use entityfx\utils\webService\contracts\services\HttpProxy;
+use entityfx\utils\webService\contracts\services\WebServiceEndpoint;
 
 
 /**

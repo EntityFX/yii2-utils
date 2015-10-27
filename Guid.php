@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils;
+namespace entityfx\utils;
 use yii\base\Component;
-use app\utils\exceptions\ValidationException;
+use entityfx\utils\exceptions\ValidationException;
 
 /**
  * class Guid

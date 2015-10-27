@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\crypto;
-use app\utils\enum\EnumBase;
+namespace entityfx\utils\crypto;
+use entityfx\utils\enum\EnumBase;
 
 /**
  * Class CryptoAlgorithmEnum

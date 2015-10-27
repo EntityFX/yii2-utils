@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\logging;
-use app\utils\enum\EnumBase;
+namespace entityfx\utils\logging;
+use entityfx\utils\enum\EnumBase;
 
 /**
  * Class LoggingSeverityEnum

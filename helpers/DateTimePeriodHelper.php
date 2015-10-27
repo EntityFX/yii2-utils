@@ -1,5 +1,5 @@
 <?php
-namespace app\utils\helpers;
+namespace entityfx\utils\helpers;
 
 use DateTime;
 use yii\base\Component;

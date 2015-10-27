@@ -1,17 +1,17 @@
 <?php
 
-namespace app\utils\workers\implementation;
+namespace entityfx\utils\workers\implementation;
 
-use app\utils\exceptions\InternalExceptionBase;
-use app\utils\exceptions\WorkerException;
-use app\utils\workers\contracts\enums\WorkerEventStatusEnum;
-use app\utils\workers\contracts\events\WorkerEvent;
-use app\utils\workers\contracts\repositories\WorkerData;
-use app\utils\workers\contracts\repositories\WorkerRepositoryInterface;
-use app\utils\workers\contracts\repositories\WorkerStatusEnum;
-use app\utils\workers\contracts\WorkerInterceptorInterface;
-use app\utils\workers\contracts\WorkerInterface;
-use app\utils\workers\contracts\WorkerSettings;
+use entityfx\utils\exceptions\InternalExceptionBase;
+use entityfx\utils\exceptions\WorkerException;
+use entityfx\utils\workers\contracts\enums\WorkerEventStatusEnum;
+use entityfx\utils\workers\contracts\events\WorkerEvent;
+use entityfx\utils\workers\contracts\repositories\WorkerData;
+use entityfx\utils\workers\contracts\repositories\WorkerRepositoryInterface;
+use entityfx\utils\workers\contracts\repositories\WorkerStatusEnum;
+use entityfx\utils\workers\contracts\WorkerInterceptorInterface;
+use entityfx\utils\workers\contracts\WorkerInterface;
+use entityfx\utils\workers\contracts\WorkerSettings;
 use DateTime;
 use yii\base\Component;
 use yii\base\Exception;

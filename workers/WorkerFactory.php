@@ -1,14 +1,14 @@
 <?php
 
-namespace app\utils\workers;
+namespace entityfx\utils\workers;
 
-use app\utils\exceptions\WorkerException;
-use app\utils\webService\WebClientProxyFactory;
-use app\utils\workers\contracts\repositories\WorkerData;
-use app\utils\workers\contracts\repositories\WorkerRepositoryInterface;
-use app\utils\workers\contracts\WorkerInterface;
-use app\utils\workers\contracts\WorkerSettings;
-use app\utils\workers\contracts\WorkerWithProxiesInterface;
+use entityfx\utils\exceptions\WorkerException;
+use entityfx\utils\webService\WebClientProxyFactory;
+use entityfx\utils\workers\contracts\repositories\WorkerData;
+use entityfx\utils\workers\contracts\repositories\WorkerRepositoryInterface;
+use entityfx\utils\workers\contracts\WorkerInterface;
+use entityfx\utils\workers\contracts\WorkerSettings;
+use entityfx\utils\workers\contracts\WorkerWithProxiesInterface;
 use yii\base\Exception;
 use yii\di\Container;
 

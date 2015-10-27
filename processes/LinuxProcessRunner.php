@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\processes;
+namespace entityfx\utils\processes;
 
 use Yii;
 

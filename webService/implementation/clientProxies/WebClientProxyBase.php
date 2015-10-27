@@ -1,11 +1,11 @@
 <?php
 
-namespace app\utils\webService\implementation\clientProxies;
+namespace entityfx\utils\webService\implementation\clientProxies;
 
-use app\utils\webService\contracts\clientProxies\WebClientProxyInterface;
-use app\utils\webService\contracts\HttpAuthBase;
-use app\utils\webService\contracts\services\HttpProxy;
-use app\utils\webService\contracts\services\WebServiceEndpoint;
+use entityfx\utils\webService\contracts\clientProxies\WebClientProxyInterface;
+use entityfx\utils\webService\contracts\HttpAuthBase;
+use entityfx\utils\webService\contracts\services\HttpProxy;
+use entityfx\utils\webService\contracts\services\WebServiceEndpoint;
 use yii\base\Component;
 
 

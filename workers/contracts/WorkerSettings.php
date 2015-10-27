@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\workers\contracts;
+namespace entityfx\utils\workers\contracts;
 use yii\base\Component;
-use app\utils\workers\contracts\repositories\WorkerData;
+use entityfx\utils\workers\contracts\repositories\WorkerData;
 
 /**
  * Class WorkerSettings

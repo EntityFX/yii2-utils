@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\logging;
+namespace entityfx\utils\logging;
 
 interface LogsFindQueryInterface {
     public function setTableName($tableName);

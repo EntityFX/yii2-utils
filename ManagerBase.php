@@ -1,11 +1,11 @@
 <?php
 
-namespace app\utils;
+namespace entityfx\utils;
 
-use app\utils\enum\OrderDirectionEnum;
-use app\utils\exceptions\ManagerException;
-use app\utils\mappers\BusinessLogicMapperBase;
-use app\utils\order\OrderBase;
+use entityfx\utils\enum\OrderDirectionEnum;
+use entityfx\utils\exceptions\ManagerException;
+use entityfx\utils\mappers\BusinessLogicMapperBase;
+use entityfx\utils\order\OrderBase;
 use yii\di\ServiceLocator;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\queries;
+namespace entityfx\utils\queries;
 use Yii;
 use yii\base\Component;
 use yii\db\Connection;

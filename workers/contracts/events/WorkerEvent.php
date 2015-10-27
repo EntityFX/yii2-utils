@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\workers\contracts\events;
+namespace entityfx\utils\workers\contracts\events;
 
-use app\utils\workers\contracts\enums\WorkerEventStatusEnum;
+use entityfx\utils\workers\contracts\enums\WorkerEventStatusEnum;
 use yii\base\Event;
 
 

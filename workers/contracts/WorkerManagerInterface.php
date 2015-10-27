@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\workers\contracts;
+namespace entityfx\utils\workers\contracts;
 
-use app\utils\Limit;
+use entityfx\utils\Limit;
 
 interface WorkerManagerInterface {
 

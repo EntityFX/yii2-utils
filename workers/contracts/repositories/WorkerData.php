@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\workers\contracts\repositories;
+namespace entityfx\utils\workers\contracts\repositories;
 use SimpleXMLElement;
 use DateTime;
 use yii\base\Component;

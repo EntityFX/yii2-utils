@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\logging;
-use app\utils\order\OrderBase;
+namespace entityfx\utils\logging;
+use entityfx\utils\order\OrderBase;
 
 /**
  * Class LoggingOrder

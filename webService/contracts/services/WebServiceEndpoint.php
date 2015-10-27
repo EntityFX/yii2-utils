@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\webService\contracts\services;
+namespace entityfx\utils\webService\contracts\services;
 ;
 use yii\base\Component;
 

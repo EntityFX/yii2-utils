@@ -1,13 +1,13 @@
 <?php
 
-namespace app\utils\workers\contracts\settings;
+namespace entityfx\utils\workers\contracts\settings;
 use SimpleXMLElement;
-use app\utils\webService\HttpProxy;
-use app\utils\webService\HttpAuthBase;
-use app\utils\webService\HttpAuthBasic;
-use app\utils\webService\HttpAuthDigest;
-use app\utils\crypto\CryptoAlgorithmEnum;
-use app\utils\crypto\CryptoFactory;
+use entityfx\utils\webService\HttpProxy;
+use entityfx\utils\webService\HttpAuthBase;
+use entityfx\utils\webService\HttpAuthBasic;
+use entityfx\utils\webService\HttpAuthDigest;
+use entityfx\utils\crypto\CryptoAlgorithmEnum;
+use entityfx\utils\crypto\CryptoFactory;
 use yii\base\Exception;
 
 /**

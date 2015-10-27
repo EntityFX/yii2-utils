@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\enum;
+namespace entityfx\utils\enum;
 
 /**
  * Order direction enum

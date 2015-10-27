@@ -1,9 +1,9 @@
 <?php
-namespace app\utils\crypto;
+namespace entityfx\utils\crypto;
 
-use app\utils\crypto\implementation\DefaultCryptoAlgorithm;
-use app\utils\crypto\CryptoAlgorithmEnum;
-use app\utils\crypto\CryptoAlgorithmInterface;
+use entityfx\utils\crypto\implementation\DefaultCryptoAlgorithm;
+use entityfx\utils\crypto\CryptoAlgorithmEnum;
+use entityfx\utils\crypto\CryptoAlgorithmInterface;
 
 class CryptoFactory {
 

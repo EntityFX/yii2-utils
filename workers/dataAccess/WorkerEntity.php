@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\workers\dataAccess;
+namespace entityfx\utils\workers\dataAccess;
 use yii\db\ActiveRecord;
 
 /**

@@ -1,5 +1,5 @@
 <?php
-namespace app\utils\crypto\contracts;
+namespace entityfx\utils\crypto\contracts;
 
 interface XXTeaCryptoAlgorithmInterface {
 

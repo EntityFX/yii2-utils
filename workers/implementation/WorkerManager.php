@@ -1,15 +1,15 @@
 <?php
 
-namespace app\utils\workers\implementation;
+namespace entityfx\utils\workers\implementation;
 
-use app\utils\exceptions\ManagerException;
-use app\utils\Limit;
-use app\utils\ManagerBase;
-use app\utils\workers\contracts\repositories\WorkerData;
-use app\utils\workers\contracts\repositories\WorkerRepositoryInterface;
-use app\utils\workers\contracts\repositories\WorkerStatusEnum;
-use app\utils\workers\contracts\WorkerManagerInterface;
-use app\utils\workers\WorkerFactory;
+use entityfx\utils\exceptions\ManagerException;
+use entityfx\utils\Limit;
+use entityfx\utils\ManagerBase;
+use entityfx\utils\workers\contracts\repositories\WorkerData;
+use entityfx\utils\workers\contracts\repositories\WorkerRepositoryInterface;
+use entityfx\utils\workers\contracts\repositories\WorkerStatusEnum;
+use entityfx\utils\workers\contracts\WorkerManagerInterface;
+use entityfx\utils\workers\WorkerFactory;
 use DateTime;
 
 class WorkerManager extends ManagerBase implements WorkerManagerInterface {

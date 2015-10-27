@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\workers\contracts\enums;
-use app\utils\enum\EnumBase;
+namespace entityfx\utils\workers\contracts\enums;
+use entityfx\utils\enum\EnumBase;
 
 /**
  * @link      http://entityfx.ru

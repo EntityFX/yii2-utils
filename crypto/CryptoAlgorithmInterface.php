@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\crypto;
+namespace entityfx\utils\crypto;
 
 /**
  * Class ICryptoAlgorithm

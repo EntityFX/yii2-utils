@@ -1,9 +1,9 @@
 <?php
 
-namespace app\utils\crypto\implementation;
+namespace entityfx\utils\crypto\implementation;
 
-use app\utils\crypto\contracts\DefaultCryptoAlgorithmInterface;
-use app\utils\crypto\CryptoAlgorithmInterface;
+use entityfx\utils\crypto\contracts\DefaultCryptoAlgorithmInterface;
+use entityfx\utils\crypto\CryptoAlgorithmInterface;
 
 class DefaultCryptoAlgorithm implements CryptoAlgorithmInterface, DefaultCryptoAlgorithmInterface {
 

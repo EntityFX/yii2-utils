@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\order;
+namespace entityfx\utils\order;
 
-use app\utils\enum\OrderDirectionEnum;
+use entityfx\utils\enum\OrderDirectionEnum;
 
 /**
  * Интерфейс для реализации сортировки

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\helpers;
+namespace entityfx\utils\helpers;
 use yii\base\Component;
-use app\utils\exceptions\ValidationException;
+use entityfx\utils\exceptions\ValidationException;
 
 /**
  * Class QuarterYear

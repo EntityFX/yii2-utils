@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\validators;
+namespace entityfx\utils\validators;
 
 use DateInterval;
 use DateTime;

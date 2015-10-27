@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\enum;
+namespace entityfx\utils\enum;
 use Exception;
 use ReflectionClass;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace app\utils\webService;
+namespace entityfx\utils\webService;
 
-use app\utils\webService\contracts\clientProxies\repositories\WebClientProxyRepositoryInterface;
-use app\utils\webService\contracts\clientProxies\WebClientProxyInterface;
+use entityfx\utils\webService\contracts\clientProxies\repositories\WebClientProxyRepositoryInterface;
+use entityfx\utils\webService\contracts\clientProxies\WebClientProxyInterface;
 use Traversable;
 use yii\base\Exception;
 use yii\di\Container;

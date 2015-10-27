@@ -1,5 +1,5 @@
 <?php
-namespace app\utils\webService\contracts;
+namespace entityfx\utils\webService\contracts;
 
 /**
  * Class HttpAuthDigest

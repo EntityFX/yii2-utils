@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\webService\contracts;
+namespace entityfx\utils\webService\contracts;
 
 interface VersionableInterface {
     function getVersion();

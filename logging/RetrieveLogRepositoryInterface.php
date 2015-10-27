@@ -1,7 +1,7 @@
 <?php
-namespace app\utils\logging;
+namespace entityfx\utils\logging;
 
-use app\utils\Limit;
+use entityfx\utils\Limit;
 use Traversable;
 
 interface RetrieveLogRepositoryInterface {

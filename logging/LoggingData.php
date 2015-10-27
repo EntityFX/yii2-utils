@@ -1,7 +1,7 @@
 <?php
 
-namespace app\utils\logging;
-use app\utils\ModelKeyBase;
+namespace entityfx\utils\logging;
+use entityfx\utils\ModelKeyBase;
 use DateTime;
 
 /**

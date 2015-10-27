@@ -1,5 +1,5 @@
 <?php
-namespace app\utils\crypto\activityLog;
+namespace entityfx\utils\crypto\activityLog;
 
 /**
  * Interface IActivityOperationType

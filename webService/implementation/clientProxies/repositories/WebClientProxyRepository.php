@@ -1,15 +1,15 @@
 <?php
-namespace app\utils\webService\implementation\clientProxies\repositories;
+namespace entityfx\utils\webService\implementation\clientProxies\repositories;
 
-use app\utils\Limit;
-use app\utils\mappers\BusinessLogicMapperBase;
-use app\utils\RepositoryBase;
-use app\utils\webService\contracts\clientProxies\repositories\ClientProxyDataRetrieveResult;
-use app\utils\webService\contracts\clientProxies\repositories\WebClientProxyData;
-use app\utils\webService\contracts\clientProxies\repositories\WebClientProxyRepositoryInterface;
-use app\utils\webService\dataAccess\ClientProxyEntity;
-use app\utils\webService\implementation\clientProxies\mapper\ClientProxyEndpointMapper;
-use app\utils\webService\implementation\clientProxies\mapper\ClientProxyMapper;
+use entityfx\utils\Limit;
+use entityfx\utils\mappers\BusinessLogicMapperBase;
+use entityfx\utils\RepositoryBase;
+use entityfx\utils\webService\contracts\clientProxies\repositories\ClientProxyDataRetrieveResult;
+use entityfx\utils\webService\contracts\clientProxies\repositories\WebClientProxyData;
+use entityfx\utils\webService\contracts\clientProxies\repositories\WebClientProxyRepositoryInterface;
+use entityfx\utils\webService\dataAccess\ClientProxyEntity;
+use entityfx\utils\webService\implementation\clientProxies\mapper\ClientProxyEndpointMapper;
+use entityfx\utils\webService\implementation\clientProxies\mapper\ClientProxyMapper;
 use Traversable;
 use yii\db\Query;
 

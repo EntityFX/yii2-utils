@@ -6,7 +6,7 @@
  * Time: 18:28
  */
 
-namespace app\utils\dataProvider;
+namespace entityfx\utils\dataProvider;
 
 
 use yii\data\BaseDataProvider;

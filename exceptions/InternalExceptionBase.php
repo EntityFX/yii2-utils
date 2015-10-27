@@ -1,6 +1,6 @@
 <?php
 
-namespace app\utils\exceptions;
+namespace entityfx\utils\exceptions;
 
 use yii\base\Exception;
 

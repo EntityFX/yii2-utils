@@ -1,8 +1,8 @@
 <?php
 
-namespace app\utils\webService\implementation\services;
+namespace entityfx\utils\webService\implementation\services;
 
-use app\utils\webService\contracts\services\enums\WebServiceTypeEnum;
+use entityfx\utils\webService\contracts\services\enums\WebServiceTypeEnum;
 use yii\base\Component;
 
 /**
