@@ -22,7 +22,7 @@ class WorkerFactory {
     public static function createWorker($workerId) {
         $container = self::getIoc();
         /** @var $workerRepository WorkerRepositoryInterface */
-        $workerRepository = $container->get('app\utils\workers\contracts\repositories\WorkerRepositoryInterface');
+        $workerRepository = $container->get('entityfx\utils\workers\contracts\repositories\WorkerRepositoryInterface');
         /** @var $workerData WorkerData */
         $workerData = $workerRepository->getById($workerId);
         if ($workerData == null) {
@@ -46,7 +46,7 @@ class WorkerFactory {
             $worker->setWebClientProxyList($webClientProxyList);
         }
 
-        return $container->get('app\utils\workers\contracts\WorkerInterceptorInterface', ['worker' => $worker]);
+        return $container->get('entityfx\utils\workers\contracts\WorkerInterceptorInterface', ['worker' => $worker]);
 
     }
 
@@ -64,7 +64,7 @@ class WorkerFactory {
         $container = new Container();
         $container->setSingleton('workerMapper', $diConfig['workerMapper']);
         $container->setSingleton(
-            'app\utils\workers\contracts\repositories\WorkerRepositoryInterface',
+            'entityfx\utils\workers\contracts\repositories\WorkerRepositoryInterface',
             function ($container, $params, $config) use ($diConfig) {
                 return $container->get(
                     $diConfig['workerRepository'],
@@ -73,13 +73,13 @@ class WorkerFactory {
             }
         );
         $container->set(
-            'app\utils\workers\contracts\WorkerInterceptorInterface',
+            'entityfx\utils\workers\contracts\WorkerInterceptorInterface',
             function ($container, $params, $config) use ($diConfig) {
                 return $container->get(
                     $diConfig['workerInterceptor'],
                     [
                         $params['worker'],
-                        $container->get('app\utils\workers\contracts\repositories\WorkerRepositoryInterface')
+                        $container->get('entityfx\utils\workers\contracts\repositories\WorkerRepositoryInterface')
                     ]
                 );
             }
