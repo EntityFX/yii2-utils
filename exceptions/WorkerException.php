@@ -1,7 +1,7 @@
 <?php
 
 namespace entityfx\utils\exceptions;
-use yii\base\Exception;
+
 
 /**
  * Class WorkerException
@@ -12,11 +12,11 @@ class WorkerException extends InternalExceptionBase {
     private $_faultCode;
 
     /**
-     * @var Exception
+     * @var \Exception
      */
     private $_internalException;
 
-    public function __construct($message, $faultCode = null, Exception $internalException = null) {
+    public function __construct($message, $faultCode = null, \Exception $internalException = null) {
         $this->_faultCode = (int)$faultCode;
         $this->_internalException = $internalException;
         parent::__construct($message, $internalException);

@@ -1,5 +1,9 @@
 <?php
 
+namespace entityfx\utils\objectHistory\contracts\repositories;
+use entityfx\utils\objectHistory\contracts\ObjectHistory;
+use DateTime;
+
 /**
  * Created by PhpStorm.
  * User: Гузалия
@@ -13,7 +17,7 @@ interface ObjectHistoryRepositoryInterface {
      * @param ObjectHistory $domainObject Информация об объекте
      *
      */
-    public function add(ObjectHistory $domainObject);
+    public function store(ObjectHistory $domainObject);
 
     /**
      * Список изменённых объектов с заданного времени и интервалом времени
@@ -23,7 +27,7 @@ interface ObjectHistoryRepositoryInterface {
      *
      * @internal param \DateInterval $dateInterval Интервал времени
      *
-     * @return CList|ObjectHistory[]
+     * @return ObjectHistory[]
      */
     public function read(DateTime $startDateTime, DateTime $endDateTime);
 }

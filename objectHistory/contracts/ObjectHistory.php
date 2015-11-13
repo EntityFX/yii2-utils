@@ -1,7 +1,10 @@
 <?php
 
 namespace entityfx\utils\objectHistory\contracts;
+use DateTime;
+use entityfx\utils\Guid;
 use entityfx\utils\ModelGuidBase;
+use entityfx\utils\objectHistory\contracts\enums\HistoryTypeEnum;
 use yii\base\Object;
 
 /**
@@ -9,14 +12,14 @@ use yii\base\Object;
  *
  * @property-read int $visibleID Идентификатор
  * @property-read Guid                  $guid
- * @property ObjectHistoryTypeEnum      $type
- * @property ObjectHistoryCategoryEnum  $category
+ * @property HistoryTypeEnum      $type
+ * @property int  $category
  * @property DateTime                   $changeDateTime
  * @property int                        $priority
  */
 class ObjectHistory extends ModelGuidBase {
     /**
-     * @var ObjectHistoryTypeEnum
+     * @var HistoryTypeEnum
      */
     private $_type;
 
@@ -59,35 +62,35 @@ class ObjectHistory extends ModelGuidBase {
     private $_changeDateTime;
 
     /**
-     * @param ObjectHistoryCategoryEnum $category
+     * @param int $category
      */
-    public function setCategory(ObjectHistoryCategoryEnum $category) {
-        $this->_category = $category;
+    public function setCategory($category) {
+        $this->_category = (int)$category;
     }
 
     /**
-     * @return ObjectHistoryCategoryEnum
+     * @return int
      */
     public function getCategory() {
         return $this->_category;
     }
 
     /**
-     * @param ObjectHistoryTypeEnum $type
+     * @param HistoryTypeEnum $type
      */
-    public function setType(ObjectHistoryTypeEnum $type) {
+    public function setType(HistoryTypeEnum $type) {
         $this->_type = $type;
     }
 
     /**
-     * @return ObjectHistoryTypeEnum
+     * @return HistoryTypeEnum
      */
     public function getType() {
         return $this->_type;
     }
 
     /**
-     * @var ObjectHistoryCategoryEnum;
+     * @var int;
      */
     private $_category;
 }

@@ -9,7 +9,6 @@ use entityfx\utils\workers\contracts\repositories\WorkerRepositoryInterface;
 use entityfx\utils\workers\contracts\WorkerInterface;
 use entityfx\utils\workers\contracts\WorkerSettings;
 use entityfx\utils\workers\contracts\WorkerWithProxiesInterface;
-use yii\base\Exception;
 use yii\di\Container;
 
 class WorkerFactory {
@@ -36,7 +35,7 @@ class WorkerFactory {
             /** @var $worker WorkerInterface */
             $worker = $container->get($workerData->className, []);
             $worker->setWorkerSettings($workerSettings);
-        } catch(Exception $exception) {
+        } catch(\Exception $exception) {
             throw new WorkerException("Cannot instantiate worker '{$workerData->className}'", WorkerInterface::FAULT_WORKER_DOESNT_EXIST, $exception);
         }
         /** @var $worker WorkerWithProxiesInterface */

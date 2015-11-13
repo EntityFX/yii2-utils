@@ -1,5 +1,6 @@
 <?php
 namespace entityfx\utils\objectHistory\contracts\enums;
+use entityfx\utils\enum\EnumBase;
 
 /**
  * Created by JetBrains PhpStorm.

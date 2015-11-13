@@ -1,6 +1,7 @@
 <?php
 
 namespace entityfx\utils\objectHistory\dataAccess;
+use yii\db\ActiveRecord;
 
 /**
  * Created by PhpStorm.
