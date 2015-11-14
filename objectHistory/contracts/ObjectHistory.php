@@ -10,8 +10,7 @@ use yii\base\Object;
 /**
  * Class ObjectHistory
  *
- * @property-read int $visibleID Идентификатор
- * @property-read Guid                  $guid
+ * @property Guid                  $guid
  * @property HistoryTypeEnum      $type
  * @property int  $category
  * @property DateTime                   $changeDateTime

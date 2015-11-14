@@ -45,7 +45,7 @@ class ObjectHistoryRepository extends RepositoryBase implements ObjectHistoryRep
             if ($object === null)  {
                 $historyObjectEntity->save();
             } else {
-                $historyObjectEntity->setOldAttribute('id', $object->id->toBinaryString());
+                $historyObjectEntity->setOldAttribute('id', $domainObject->guid->toBinaryString());
                 $historyObjectEntity->update();
             }
         } catch (IntegrityException $integrityException) {
@@ -70,19 +70,12 @@ class ObjectHistoryRepository extends RepositoryBase implements ObjectHistoryRep
         $retrieveQuery                          = $retrieveQuery->where(
             ['between', 'changeDateTime', $fromDateTimeFormatted, $toDateTimeFormatted]
         );
-        var_dump($retrieveQuery->all());
-    }
-
-    private function update(ObjectHistory $domainObject) {
-        $this->db->createCommand()
-            ->update(
-                KogatooObjectHistoryTable::NAME,
-                ObjectHistoryMapper::updateObjectHistoryToArray($domainObject),
-                KogatooObjectHistoryTable::GUID_FIELD . ' = :guid',
-                array(
-                    ':guid' => $domainObject->guid->value
-                )
-            );
+        $retrieveResult = $retrieveQuery->all();
+        $retrieveDataItems       = [];
+        foreach ($retrieveResult as $item) {
+            $retrieveDataItems[] = $this->_mapper->entityToContract($item);
+        }
+        return $retrieveDataItems;
     }
 
     /**
