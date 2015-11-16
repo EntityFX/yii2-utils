@@ -6,7 +6,7 @@ use DateTime;
 use entityfx\utils\exceptions\ManagerException;
 use entityfx\utils\Guid;
 use entityfx\utils\mappers\BusinessLogicMapperBase;
-use entityfx\utils\objectHistory\contracts\ObjectHistory;
+use entityfx\utils\objectHistory\contracts\ObjectHistoryItem;
 use entityfx\utils\objectHistory\contracts\enums\HistoryTypeEnum;
 use entityfx\utils\objectHistory\dataAccess\ObjectHistoryEntity;
 use yii\db\ActiveRecord;
@@ -27,8 +27,8 @@ class ObjectHistoryMapper extends BusinessLogicMapperBase {
      * @return ActiveRecord
      */
     public function contractToEntity(Object $contract) {
-        /** @var $contract ObjectHistory */
-        if (!($contract instanceof ObjectHistory)) {
+        /** @var $contract ObjectHistoryItem */
+        if (!($contract instanceof ObjectHistoryItem)) {
             throw new ManagerException("Wrong type of mapping contract");
         }
         $objectHistory                 = new ObjectHistoryEntity();
@@ -36,7 +36,6 @@ class ObjectHistoryMapper extends BusinessLogicMapperBase {
         $objectHistory->category       = $contract->category;
         $objectHistory->type           = $contract->type->getValue();
         $objectHistory->changeDateTime = null;
-        $objectHistory->priority       = $contract->priority;
         return $objectHistory;
     }
 
@@ -46,11 +45,11 @@ class ObjectHistoryMapper extends BusinessLogicMapperBase {
      * @return \yii\base\Object
      */
     public function entityToContract(ActiveRecord $entity) {
-        /** @var $contract ObjectHistory */
+        /** @var $contract ObjectHistoryItem */
         if (!($entity instanceof ObjectHistoryEntity)) {
             throw new ManagerException("Wrong type of mapping entity");
         }
-        $objectHistory                 = new ObjectHistory();
+        $objectHistory                 = new ObjectHistoryItem();
         $objectHistory->guid             = Guid::parseBinaryString($entity->id);
         $objectHistory->category       = $contract->category;
         $objectHistory->type           = new HistoryTypeEnum($contract->type);
@@ -58,7 +57,6 @@ class ObjectHistoryMapper extends BusinessLogicMapperBase {
             $objectHistory->changeDateTime =
                 DateTime::createFromFormat('Y-m-d H:i:s', $contract->changeDateTime) ;
         }
-        $objectHistory->priority       = $contract->priority;
         return $objectHistory;
     }
 }

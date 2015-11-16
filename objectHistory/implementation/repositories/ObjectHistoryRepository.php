@@ -3,7 +3,7 @@
 namespace entityfx\utils\objectHistory\implementation\repositories;
 use DateTime;
 use entityfx\utils\exceptions\ManagerException;
-use entityfx\utils\objectHistory\contracts\ObjectHistory;
+use entityfx\utils\objectHistory\contracts\ObjectHistoryItem;
 use entityfx\utils\objectHistory\contracts\repositories\ObjectHistoryRepositoryInterface;
 use entityfx\utils\objectHistory\dataAccess\ObjectHistoryEntity;
 use entityfx\utils\Guid;
@@ -33,10 +33,10 @@ class ObjectHistoryRepository extends RepositoryBase implements ObjectHistoryRep
     /**
      * Добавляет информацию об изменённом объекте в репозиторий истории
      *
-     * @param ObjectHistory $domainObject Информация об объекте
+     * @param ObjectHistoryItem $domainObject Информация об объекте
      *
      */
-    public function store(ObjectHistory $domainObject) {
+    public function store(ObjectHistoryItem $domainObject) {
         try {
             $historyObjectEntity = $this->_mapper->contractToEntity($domainObject);
             $object = $this->getById($domainObject->guid);
@@ -61,7 +61,7 @@ class ObjectHistoryRepository extends RepositoryBase implements ObjectHistoryRep
      * @param DateTime $endDateTime
      *
      *
-     * @return ObjectHistory[]
+     * @return ObjectHistoryItem[]
      */
     public function read(DateTime $startDateTime, DateTime $endDateTime) {
         $retrieveQuery = ObjectHistoryEntity::find();
@@ -80,7 +80,7 @@ class ObjectHistoryRepository extends RepositoryBase implements ObjectHistoryRep
 
     /**
      * @param Guid $guid
-     * @return ObjectHistory
+     * @return ObjectHistoryItem
      */
     private function getById(Guid $guid) {
         $entity = ObjectHistoryEntity::findOne($guid->toBinaryString());
