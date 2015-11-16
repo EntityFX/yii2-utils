@@ -14,32 +14,12 @@ use yii\base\Object;
  * @property HistoryTypeEnum      $type
  * @property int  $category
  * @property DateTime                   $changeDateTime
- * @property int                        $priority
  */
-class ObjectHistory extends ModelGuidBase {
+class ObjectHistoryItem extends ModelGuidBase {
     /**
      * @var HistoryTypeEnum
      */
     private $_type;
-
-    /**
-     * @param int $priority
-     */
-    public function setPriority($priority) {
-        $this->_priority = (int)$priority;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPriority() {
-        return $this->_priority;
-    }
-
-    /**
-     * @var int
-     */
-    private $_priority;
 
     /**
      * @param DateTime $changeDateTime

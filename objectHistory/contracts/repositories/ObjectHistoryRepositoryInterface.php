@@ -1,7 +1,7 @@
 <?php
 
 namespace entityfx\utils\objectHistory\contracts\repositories;
-use entityfx\utils\objectHistory\contracts\ObjectHistory;
+use entityfx\utils\objectHistory\contracts\ObjectHistoryItem;
 use DateTime;
 
 /**
@@ -14,10 +14,10 @@ interface ObjectHistoryRepositoryInterface {
     /**
      * Добавляет информацию об изменённом объекте в репозиторий истории
      *
-     * @param ObjectHistory $domainObject Информация об объекте
+     * @param ObjectHistoryItem $domainObject Информация об объекте
      *
      */
-    public function store(ObjectHistory $domainObject);
+    public function store(ObjectHistoryItem $domainObject);
 
     /**
      * Список изменённых объектов с заданного времени и интервалом времени
@@ -25,9 +25,8 @@ interface ObjectHistoryRepositoryInterface {
      * @param DateTime $startDateTime Начальное время, с которого возвращается список изменённых объектов
      * @param DateTime $endDateTime
      *
-     * @internal param \DateInterval $dateInterval Интервал времени
      *
-     * @return ObjectHistory[]
+     * @return ObjectHistoryItem[]
      */
     public function read(DateTime $startDateTime, DateTime $endDateTime);
 }

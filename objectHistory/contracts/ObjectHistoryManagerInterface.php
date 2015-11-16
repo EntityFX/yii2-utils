@@ -10,17 +10,17 @@ use entityfx\utils\objectHistory\contracts\enums\HistoryTypeEnum;
  * Time: 1:41
  */
 interface ObjectHistoryManagerInterface {
-    function objectModified(HistoryTypeEnum $type, $object);
+    function objectModified(HistoryTypeEnum $type, $giud, $category);
 
     /**
      * Список изменённых объектов с заданного времени и интервалом времени
      *
-     * @param DateTime $startDateTime Начальное время, с которого возвращается список изменённых объектов
-     * @param DateTime $endDateTime
+     * @param \DateTime $startDateTime Начальное время, с которого возвращается список изменённых объектов
+     * @param \DateTime $endDateTime
      *
      * @internal param \DateInterval $dateInterval Интервал времени
      *
-     * @return ObjectHistory[]
+     * @return ObjectHistoryItem[]
      */
-    function retrieve(DateTime $startDateTime, DateTime $endDateTime);
+    function retrieve(\DateTime $startDateTime, \DateTime $endDateTime);
 }
