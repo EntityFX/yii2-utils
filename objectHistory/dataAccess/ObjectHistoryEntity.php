@@ -11,6 +11,6 @@ use yii\db\ActiveRecord;
  */
 class ObjectHistoryEntity extends ActiveRecord {
     public static function tableName() {
-        return 'ObjectHistory';
+        return 'Utils_ObjectHistory';
     }
 }

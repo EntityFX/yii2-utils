@@ -10,6 +10,6 @@ use yii\db\ActiveRecord;
  */
 class WorkerEntity extends ActiveRecord {
     public static function tableName() {
-        return 'Worker';
+        return 'Utils_Worker';
     }
 }

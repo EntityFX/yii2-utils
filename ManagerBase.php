@@ -6,7 +6,7 @@ use entityfx\utils\enum\OrderDirectionEnum;
 use entityfx\utils\exceptions\ManagerException;
 use entityfx\utils\mappers\BusinessLogicMapperBase;
 use entityfx\utils\order\OrderBase;
-use yii\di\ServiceLocator;
+use yii\base\Component;
 
 /**
  * Description of Services

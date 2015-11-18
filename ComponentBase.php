@@ -10,14 +10,19 @@ namespace entityfx\utils;
 
 
 use yii\base\Component;
-use yii\di\ServiceLocator;
+use yii\base\Event;
 
 class ComponentBase extends Component {
 
     /**
      * ioc container
      *
-     * @var ServiceLocator
+     * @var Container
      */
     protected $ioc;
+
+    public function triggerComponentEvent($name, Event $event, Component $component) {
+        if ($component === null) return;
+        $component->trigger($name, $event);
+    }
 }

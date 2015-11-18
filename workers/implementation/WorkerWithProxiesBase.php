@@ -2,7 +2,10 @@
 
 namespace entityfx\utils\workers\implementation;
 
+use entityfx\utils\objectHistory\contracts\enums\HistoryTypeEnum;
+use entityfx\utils\objectHistory\contracts\ObjectHistoryItem;
 use entityfx\utils\webService\contracts\clientProxies\WebClientProxyInterface;
+use entityfx\utils\webService\contracts\VersionableInterface;
 use entityfx\utils\workers\contracts\settings\WorkerClientProxySettingsInterface;
 use entityfx\utils\workers\contracts\settings\WorkerClientProxyXmlSettings;
 use entityfx\utils\workers\contracts\WorkerInterface;
@@ -56,8 +59,8 @@ abstract class WorkerWithProxiesBase extends WorkerBase implements WorkerInterfa
                     } else {
                         $this->log("Успешная проверка версии: {$endpoint->baseUrl}", Logger::LEVEL_INFO);
                     }
-                } catch (Exception $exception) {
-                    $this->log("Не удалось получить версию для прокси: {$endpoint->baseUrl}. Exception: {$exception->getMessage()}", CLogger::LEVEL_ERROR);
+                } catch (\Exception $exception) {
+                    $this->log("Не удалось получить версию для прокси: {$endpoint->baseUrl}. Exception: {$exception->getMessage()}", Logger::LEVEL_ERROR);
                     $removeProxyList[] = $clientProxy;
                 }
             }
@@ -131,13 +134,13 @@ abstract class WorkerWithProxiesBase extends WorkerBase implements WorkerInterfa
     /**
      * Выполняет операцию синхронизации
      *
-     * @param ObjectHistory                  $objectHistory
+     * @param ObjectHistoryItem                  $objectHistory
      * @param Traversable|WebClientProxyInterface[]        $proxyList
      * @param WorkerSynchroniseCallbackTypes $callBackList
      * @param                                $objectLogName
      * @param array                          $methodLogList
      */
-    protected function doAction(ObjectHistory $objectHistory,
+    protected function doAction(ObjectHistoryItem $objectHistory,
                                 Traversable $proxyList, WorkerSynchroniseCallbackTypes $callBackList,
                                 $objectLogName,
                                 array $methodLogList) {
@@ -154,7 +157,7 @@ abstract class WorkerWithProxiesBase extends WorkerBase implements WorkerInterfa
             $serviceOperationCallback = null;
             $methodLogName            = $methodLogList[$operation];
 
-            if ($operation === ObjectHistoryTypeEnum::DELETE) {
+            if ($operation === HistoryTypeEnum::DELETE) {
                 $serviceOperationCallback = $callBackList->deleteCallback;
 
                 $entity = $objectHistory->guid;
@@ -163,25 +166,25 @@ abstract class WorkerWithProxiesBase extends WorkerBase implements WorkerInterfa
                 $entity       = $findCallback($objectHistory->guid);
 
                 if ($entity !== null && $callBackList->existsCallback !== null) {
-                    $existsMethodLogName = $methodLogList[ObjectHistoryTypeEnum::EXISTS];
+                    $existsMethodLogName = $methodLogList[HistoryTypeEnum::EXISTS];
                     try {
                         $existsCallback = $callBackList->existsCallback;
                         $isObjectExists = $existsCallback($siteUpdateProxy, $objectHistory->guid);
                         $isObjectExistsText = $isObjectExists ? true : false;
                         $this->logServiceCall($proxyClassName, $existsMethodLogName,
-                            $endpointUrl, self::getOperationText(new ObjectHistoryTypeEnum(ObjectHistoryTypeEnum::EXISTS)),
+                            $endpointUrl, self::getOperationText(new HistoryTypeEnum(HistoryTypeEnum::EXISTS)),
                             $objectLogName, $objectHistory->guid->value, "[$isObjectExistsText]");
 
-                        if ($operation === ObjectHistoryTypeEnum::UPDATE && !$isObjectExists ||
-                            $operation === ObjectHistoryTypeEnum::CREATE && !$isObjectExists
+                        if ($operation === HistoryTypeEnum::UPDATE && !$isObjectExists ||
+                            $operation === HistoryTypeEnum::CREATE && !$isObjectExists
                         ) {
                             $serviceOperationCallback = $callBackList->createCallback;
-                        } elseif ($operation === ObjectHistoryTypeEnum::UPDATE && $isObjectExists) {
+                        } elseif ($operation === HistoryTypeEnum::UPDATE && $isObjectExists) {
                             $serviceOperationCallback = $callBackList->updateCallback;
                         } else {
                             continue;
                         }
-                    } catch (Exception $exception) {
+                    } catch (\Exception $exception) {
                         $this->logServiceCallException($exception,
                             $proxyClassName, $existsMethodLogName, $endpointUrl, $operationText, $objectLogName);
                         $this->getUpdateService()->failUpdateObject($objectHistory, $siteUpdateProxy->getEndpoint());
@@ -200,15 +203,15 @@ abstract class WorkerWithProxiesBase extends WorkerBase implements WorkerInterfa
 
     }
 
-    private static function getOperationText(ObjectHistoryTypeEnum $enum) {
+    private static function getOperationText(HistoryTypeEnum $enum) {
         switch ($enum->getValue()) {
-            case ObjectHistoryTypeEnum::CREATE:
+            case HistoryTypeEnum::CREATE:
                 return 'создание';
-            case ObjectHistoryTypeEnum::UPDATE:
+            case HistoryTypeEnum::UPDATE:
                 return 'редактирование';
-            case ObjectHistoryTypeEnum::DELETE:
+            case HistoryTypeEnum::DELETE:
                 return 'удаление';
-            case ObjectHistoryTypeEnum::EXISTS:
+            case HistoryTypeEnum::EXISTS:
                 return 'существование';
             default :
                 return '{unknown}';
@@ -235,14 +238,14 @@ abstract class WorkerWithProxiesBase extends WorkerBase implements WorkerInterfa
     /**
      * Логирует исключение вызова сервиса
      *
-     * @param Exception $exception
+     * @param \Exception $exception
      * @param string    $proxyClassName
      * @param string    $methodLogName
      * @param string    $endpointUrl
      * @param string    $operationText
      * @param string    $objectLogName
      */
-    private function logServiceCallException(Exception $exception,
+    private function logServiceCallException(\Exception $exception,
                                              $proxyClassName,
                                              $methodLogName,
                                              $endpointUrl, $operationText, $objectLogName) {
@@ -289,7 +292,7 @@ abstract class WorkerWithProxiesBase extends WorkerBase implements WorkerInterfa
             $this->logServiceCall($proxyClassName, $methodLogName,
                 $endpointUrl, $operationText, $objectLogName, $objectHistory->guid->value);
             $this->getUpdateService()->successUpdateObject($objectHistory, $siteUpdateProxy->getEndpoint());
-        } catch (Exception $exception) {
+        } catch (\Exception $exception) {
             $this->logServiceCallException($exception,
                 $proxyClassName, $methodLogName, $endpointUrl, $operationText, $objectLogName);
             $this->getUpdateService()->failUpdateObject($objectHistory, $siteUpdateProxy->getEndpoint());

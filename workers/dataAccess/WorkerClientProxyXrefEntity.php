@@ -12,6 +12,6 @@ use yii\db\ActiveRecord;
 
 class WorkerClientProxyXrefEntity extends ActiveRecord {
     public static function tableName() {
-        return 'WorkerClientProxyXref';
+        return 'Utils_WorkerClientProxyXref';
     }
 }

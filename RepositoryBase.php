@@ -73,8 +73,7 @@ abstract class RepositoryBase extends Component {
      */
     protected function lastInsertId()
     {
-        return (int)$this->db->createCommand('SELECT LAST_INSERT_ID()')
-            ->queryScalar();
+        return (int)$this->db->getLastInsertID();
     }
 
     /**

@@ -11,7 +11,7 @@ use yii\db\ActiveRecord;
  */
 class ClientProxyEntity extends ActiveRecord {
     public static function tableName() {
-        return 'ClientProxy';
+        return 'Utils_ClientProxy';
     }
 
     public function getEndpoints() {
