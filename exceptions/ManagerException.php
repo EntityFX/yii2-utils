@@ -1,7 +1,6 @@
 <?php
 
 namespace entityfx\utils\exceptions;
-use yii\base\Exception;
 
 /**
  * Исключения ошибок бизнес-логики в сервисах
@@ -15,7 +14,7 @@ class ManagerException extends InternalExceptionBase {
 
     private $_faultCode;
     
-    public function __construct($message, $category = "", $faultCode = null, Exception $internalException = null) {
+    public function __construct($message, $category = "", $faultCode = null, \Exception $internalException = null) {
         $this->_category = (string)$category;
         $this->_faultCode = (int)$faultCode;
         parent::__construct($message, $internalException);
